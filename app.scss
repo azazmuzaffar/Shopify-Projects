@@ -1,14 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-$themeColor: rgb(84, 158, 223);
-$blue: rgb(84, 158, 223);
-$lightgreen: rgb(5, 219, 242);
-$black: black;
-$white: white;
-$green: rgb(28, 199, 32);
-$dark: rgb(36, 36, 36);
-
-
 * {
     margin: 0;
     box-sizing: border-box;
@@ -24,90 +15,6 @@ body {
     @media only screen and (max-width: 767px) {
         font-size: 15px;
     }
-}
-
-h1,
-.h1 {
-    font-size: 50px;
-    line-height: 1.1;
-    font-weight: 800;
-
-    @media only screen and (max-width: 992px) {
-        font-size: 31px;
-    }
-}
-
-h2,
-.h2 {
-    font-size: 38px;
-    line-height: 1.1;
-    font-weight: 800;
-
-    @media only screen and (max-width: 992px) {
-        font-size: 26px;
-    }
-}
-
-h3,
-.h3 {
-    font-size: 36px;
-    line-height: 1.1;
-    font-weight: 600;
-
-    @media only screen and (max-width: 1199px) {
-        font-size: 32px;
-    }
-
-    @media only screen and (max-width: 767px) {
-        font-size: 24px;
-    }
-}
-
-h5,
-.h5 {
-    font-size: 24px;
-    line-height: 1.1;
-    font-weight: 800;
-}
-
-h6,
-.h6 {
-    font-size: 20px;
-    line-height: 1.1;
-    font-weight: 700;
-
-    @media only screen and (max-width: 767px) {
-        font-size: 18px;
-    }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-a,
-ul {
-    margin: 0;
-    padding: 0;
-    letter-spacing: normal;
-}
-
-.copy-xs {
-    font-size: 12px;
-    line-height: 1.4;
-}
-
-.copy-sm {
-    font-size: 14px;
-    line-height: 1.4;
-}
-
-.container {
-    max-width: 940px;
-    padding: 0 20px;
 }
 
 .image-ratio {
@@ -145,815 +52,146 @@ ul {
     }
 }
 
-.btn {
-    font-size: 18px;
-    font-weight: 800;
-    padding: 13px 32px;
-    border-radius: 32px;
-    transition: .3s all ease;
-
-    @media only screen and (max-width: 767px) {
-        font-size: 17px;
-        padding: 14px 26px;
-        line-height: 1.3;
-    }
-
-    &-primary {
-        color: $white;
-        background-color: $themeColor;
-        border-color: $themeColor;
-
-        &:hover {
-            border-color: rgba($themeColor, 0.8);
-            background-color: rgba($themeColor, 0.8);
-        }
-    }
-
-
-    &-green {
-        color: $white;
-        background-color: $green;
-        border-color: $green;
-
-        &:hover {
-            color: white;
-            border-color: rgba($green, 0.8);
-            background-color: rgba($green, 0.8);
-        }
-    }
-}
-
-.site-hero {
+.points-with-image {
     position: relative;
-    padding: 20px 0 42px;
-    color: $white;
+    padding: 80px 0;
 
-    @media only screen and (max-width: 992px) {
-        padding-bottom: 60px;
+    @media screen and (max-width: 991px) {
+        padding: 56px 0;
     }
 
-    &__bg {
-        pointer-events: none;
-
-        &::after {
-            content: '';
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 2;
-            opacity: 0.7;
-            background-color: $black;
-        }
-
-        img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            z-index: 1;
-        }
-    }
-
-    &__logo {
-        display: block;
-        font-size: 0;
-        line-height: 0;
+    .container {
         width: 100%;
-        max-width: 152px;
-        margin-bottom: 16px;
-
-        @media only screen and (max-width: 992px) {
-            max-width: 180px;
-            margin: 0 auto;
-            margin-bottom: 16px;
-        }
-
-        img,
-        svg {
-            width: 100%;
-            height: auto;
-        }
+        max-width: 1480px;
+        padding: 0 20px;
+        margin: 0 auto;
     }
 
-    &__logo,
-    &__content,
-    &__image {
-        position: relative;
-        z-index: 3;
-
-        h1,
-        h2 {
-            margin-bottom: 32px;
-
-            span {
-                color: $themeColor;
-            }
-        }
-
-        p {
-            width: 100%;
-            max-width: 500px;
-        }
-
-        .btn-wrapper {
-            margin-top: 32px;
-        }
+    h6,
+    h2,
+    h3,
+    h1,
+    p {
+        margin: 0;
+        letter-spacing: normal;
     }
 
-    &__content {
-        @media only screen and (max-width: 992px) {
-            width: 100%;
-            max-width: 335px;
-            margin: 0 auto;
-            text-align: center;
-        }
+    p {
+        font-size: 16px;
+        line-height: 1.6;
     }
-
-    &__image {
-        margin-right: -55px;
-        padding-left: 40px;
-
-        @media only screen and (max-width: 992px) {
-            padding-left: 0;
-            margin-right: 0;
-            width: 100%;
-            max-width: 297px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        img {
-            width: 100%;
-            height: auto;
-        }
-    }
-}
-
-.product-benefits {
-    padding: 58px 0 48px;
-    background: $blue;
-    color: $white;
-    text-align: center;
-
-    @media only screen and (max-width: 992px) {
-        padding: 48px 0;
-    }
-
-    // .container {
-    //     max-width: 1000px;
-    // }
 
     &__title {
-        max-width: 900px;
-        margin: 0 auto;
-        margin-bottom: 48px;
+        text-align: center;
+        margin-bottom: 60px;
 
-        @media only screen and (max-width: 992px) {
-            margin-bottom: 24px;
+        @media screen and (max-width: 991px) {
+            margin-bottom: 48px;
         }
 
-        h1,
         h2 {
-            span {
-                color: $lightgreen;
+            font-size: 36px;
+            text-transform: uppercase;
+
+            @media screen and (max-width: 991px) {
+                font-size: 28px;
             }
         }
     }
 
-    &__all {
+    &__row {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 48px;
-        justify-content: space-between;
 
-        @media only screen and (max-width: 992px) {
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 16px;
+        @media screen and (max-width: 1199px) {
+            gap: 24px;
         }
 
-        &--each {
-            padding: 20px;
-            border: 2px solid $lightgreen;
-            border-radius: 20px;
-            width: 100%;
-            max-width: 262px;
-            min-height: 282px;
+        @media screen and (max-width: 991px) {
+            flex-direction: column;
+        }
 
-            @media only screen and (max-width: 992px) {
-                max-width: 283px;
-                min-height: 300px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+        &--col {
+            width: calc(33.33% - 32px);
+
+            @media screen and (max-width: 1199px) {
+                width: calc(33.33% - 16px);
             }
 
-            .icon-wrapper {
+            @media screen and (max-width: 991px) {
                 width: 100%;
-                max-width: 56px;
-                min-height: 56px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin: 0 auto;
-                margin-bottom: 12px;
-
-                svg,
-                path,
-                img {
-                    width: 100%;
-                    height: auto;
-                    fill: $lightgreen;
-                    max-height: 54px;
-                }
             }
 
             &:first-child {
-                .icon-wrapper {
+                .points-with-image__each {
+                    text-align: right;
 
-                    svg,
-                    path,
-                    img {
-                        max-height: 48px;
+                    .icon-wrapper {
+                        margin-left: auto;
+                    }
+
+                    @media screen and (max-width: 991px) {
+                        text-align: left;
+
+                        .icon-wrapper {
+                            margin-left: 0;
+                        }
                     }
                 }
             }
-
-            h6,
-            h5 {
-                color: $lightgreen;
-                margin-bottom: 10px;
-
-                @media only screen and (max-width: 992px) {
-                    font-size: 22px;
-                }
-            }
-
-            p {
-                line-height: 1.2;
-
-                @media only screen and (max-width: 992px) {
-                    font-size: 17px;
-                }
-            }
         }
     }
-}
 
-.product-overview {
-    position: relative;
-    padding: 58px 0 48px;
-    background-image: url(https://cdn.greatpages.com.br/www.jetcoolerbrasil.com.br/1701106476/imagens/desktop/212529_1_168196046229758612.png);
-    background-position: 56.5763% 57.0747%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: $white;
-
-    @media only screen and (max-width: 992px) {
-        padding: 48px 0;
-    }
-
-    &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
+    &__image {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         height: 100%;
-        z-index: 2;
-        opacity: 0.7;
-        background-color: $black;
-    }
 
-    &__text-content,
-    &__swiper {
-        position: relative;
-        z-index: 4;
-    }
-
-    &__text-content {
-
-        @media only screen and (max-width: 992px) {
-            text-align: center;
+        @media screen and (max-width: 991px) {
+            margin: 32px 0;
         }
 
-        h1,
-        h2 {
-            font-size: 56px;
-            margin-bottom: 40px;
+        .image-wrapper {
+            width: 100%;
+            max-width: 420px;
+            margin: 0 auto;
 
-            @media only screen and (max-width: 992px) {
-                font-size: 25px;
+            @media screen and (max-width: 1199px) {
+                max-width: 100%;
+            }
+
+            .image-ratio {
+                img {
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+
+    &__each {
+        &:not(:last-child) {
+            margin-bottom: 48px;
+
+            @media screen and (max-width: 991px) {
                 margin-bottom: 32px;
             }
-
-            span {
-                color: $themeColor;
-            }
         }
 
-        p {
-            @media only screen and (max-width: 992px) {
+        .icon-wrapper {
+            width: 100%;
+            max-width: 56px;
+            font-size: 0;
+            line-height: 0;
+            margin-bottom: 18px;
+
+            img,
+            svg {
                 width: 100%;
-                max-width: 324px;
-                margin: 0 auto;
+                height: auto;
             }
-        }
-
-        .btn-wrapper {
-            margin-top: 32px;
-
-            .btn {
-                @media only screen and (max-width: 992px) {
-                    font-size: 16px;
-                }
-            }
-        }
-    }
-
-    &__swiper {
-        .swiper {
-            .swiper-wrapper {
-                .swiper-slide {
-                    .image-wrapper {
-                        .image-ratio {
-                            padding-top: 83%;
-                        }
-                    }
-                }
-            }
-
-            .swiper-button-prev,
-            .swiper-button-next {
-                width: 35px;
-                height: 50px;
-                background: $white;
-                pointer-events: all !important;
-                opacity: 1 !important;
-                cursor: pointer !important;
-
-                &::after {
-                    font-size: 15px;
-                    font-weight: 700;
-                    color: black;
-                }
-            }
-
-            .swiper-button-prev {
-                left: 0;
-                border-top-right-radius: 4px;
-                border-bottom-right-radius: 4px;
-            }
-
-            .swiper-button-next {
-                right: 0;
-                border-bottom-left-radius: 4px;
-                border-top-left-radius: 4px;
-            }
-        }
-    }
-}
-
-.product-mechanism {
-    padding: 48px 0;
-    background: $dark;
-    color: $white;
-    text-align: center;
-
-    &__title {
-        margin-bottom: 48px;
-
-        h2,
-        h1 {
-            margin-bottom: 24px;
-
-            span {
-                color: $themeColor;
-            }
-        }
-    }
-
-    &__demo {
-        .video-wrapper {
-            width: 100%;
-            max-width: 650px;
-            margin: 0 auto;
-        }
-    }
-}
-
-.product-options {
-    padding: 48px 0;
-    text-align: center;
-    position: relative;
-    background-image: url(https://cdn.greatpages.com.br/www.jetcoolerbrasil.com.br/1701106476/imagens/desktop/212529_1_168203920716784801.jpeg);
-    background-position: 56.5763% 57.0747%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: $black;
-
-    &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 2;
-        opacity: 0.7;
-        background-color: $black;
-        pointer-events: none;
-    }
-
-    .container {
-        max-width: 1240px;
-    }
-
-    &__title,
-    &__all {
-        position: relative;
-        z-index: 4;
-    }
-
-    &__title {
-        width: 100%;
-        max-width: 690px;
-        margin: 0 auto;
-        margin-bottom: 48px;
-        color: $white;
-
-        h1,
-        h2 {
-            span {
-                color: $themeColor;
-            }
-        }
-    }
-
-    &__all {
-        &--each {
-            background: $white;
-            padding: 32px;
-            padding-bottom: 38px;
-            border-radius: 10px;
-            overflow: visible;
-            filter: hue-rotate(0deg) saturate(1) brightness(1) contrast(1) invert(0) sepia(0) blur(0px) grayscale(0) drop-shadow(rgb(182, 190, 194) 0px 0px 10px);
-
-            .image-wrapper {
-                margin-bottom: 12px;
-
-                .image-ratio {
-                    img {
-                        object-fit: contain;
-                    }
-                }
-            }
-
-            .main-title {
-                color: white;
-                background-color: $themeColor;
-                padding: 8px 0 6px;
-                margin: 0 -32px;
-            }
-
-            .main-list {
-                margin: 12px 0;
-
-                p {
-                    margin: 0;
-                    font-size: 13px;
-                }
-            }
-
-            .main-price {
-                color: $themeColor;
-
-                p {
-                    font-size: 12px;
-                    font-weight: 700;
-                }
-            }
-        }
-
-        .btn-wrapper {
-            position: relative;
-            margin-top: -23px !important;
-
-            .btn {
-                border-radius: 0;
-                padding: 8px 20px;
-            }
-        }
-    }
-
-    .btn-wrapper {
-        position: relative;
-        z-index: 4;
-        margin-top: 48px;
-    }
-}
-
-.product-socials {
-    padding: 48px 0;
-    background-color: $dark;
-    color: $white;
-
-    .container {
-        max-width: 992px;
-    }
-
-    &__title {
-        text-align: center;
-        margin-bottom: 40px;
-
-        h2,
-        h1 {
-            text-transform: uppercase;
-
-            span {
-                color: $themeColor;
-            }
-        }
-    }
-
-    &__btn {
-        margin-top: 34px;
-        text-align: center;
-
-        @media only screen and (max-width: 767px) {
-            text-align: center;
-
-            .btn {
-                font-size: 16px;
-                padding-left: 22px;
-                padding-right: 22px;
-            }
-        }
-    }
-}
-
-.product-customers {
-    position: relative;
-    padding: 56px 0;
-    background-image: url(https://cdn.greatpages.com.br/www.jetcoolerbrasil.com.br/1701106476/imagens/desktop/212529_1_168203921524658495.jpg);
-    background-position: 52.5288% 51.0137%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: $white;
-
-    &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 2;
-        opacity: 0.7;
-        background-color: $black;
-        pointer-events: none;
-    }
-
-    &__title,
-    &__all {
-        position: relative;
-        z-index: 4;
-    }
-
-    &__title {
-        width: 100%;
-        max-width: 796px;
-        margin: 0 auto;
-        margin-bottom: 48px;
-        text-align: center;
-
-        h2,
-        h1 {
-            span {
-                color: $themeColor;
-            }
-        }
-    }
-
-    &__all {
-        &--each {
-            width: 100%;
-            max-width: 206px;
-
-            @media only screen and (max-width: 767px) {
-                margin: 0 auto;
-                text-align: center;
-            }
-
-            .icon-wrapper {
-                width: 100%;
-                max-width: 35px;
-                font-size: 0;
-                line-height: 0;
-                margin-bottom: 16px;
-
-                @media only screen and (max-width: 767px) {
-                    margin: 0 auto;
-                    margin-bottom: 16px;
-                }
-
-                svg.img,
-                path {
-                    width: 100%;
-                    height: auto;
-                    fill: $themeColor;
-                }
-            }
-
-            .text-wrapper {
-
-                h6,
-                h5 {
-                    margin-bottom: 12px;
-                    color: $themeColor;
-                }
-
-                p {
-                    line-height: 1.5;
-                }
-            }
-        }
-    }
-}
-
-.product-faq {
-    position: relative;
-    background-color: $blue;
-    padding: 56px 0;
-
-    @media only screen and (max-width: 992px) {
-        padding: 48px 0;
-    }
-
-    .container {
-        max-width: 585px;
-    }
-
-    &__title {
-        text-align: center;
-        margin-bottom: 48px;
-
-        @media only screen and (max-width: 767px) {
-            margin-bottom: 38px;
-        }
-
-        h2,
-        h1 {
-            text-transform: uppercase;
-            color: $white;
-
-            span {
-                color: $lightgreen;
-            }
-        }
-    }
-
-    &__all {
-        .accordion {
-            .accordion-item {
-                border: 0;
-                border-radius: 8px;
-
-                &:not(:last-child) {
-                    margin-bottom: 10px;
-                }
-
-                .accordion-header {
-                    border: 0;
-
-                    .accordion-button {
-                        outline: none;
-                        box-shadow: none;
-                        border: 0;
-                        background: transparent;
-                        font-weight: 700;
-                        padding-right: 16px;
-                        font-size: 15px;
-                        padding-left: 18px;
-
-                        @media only screen and (max-width: 767px) {
-                            font-size: 14px;
-                            padding: 15px 14px;
-                        }
-
-                        &::after {
-                            background-size: contain;
-                            background-position: right;
-                            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath d='M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z'/%3E%3C/svg%3E");
-
-                            @media only screen and (max-width: 767px) {
-                                width: 14px;
-                                height: 14px;
-                            }
-                        }
-
-                        &:not(.collapsed)::after {
-                            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath d='M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z'/%3E%3C/svg%3E");
-                        }
-
-                        &[aria-expanded="true"] {
-                            color: $themeColor;
-                        }
-                    }
-                }
-
-                .accordion-body {
-                    font-size: 14px;
-                    padding: 18px;
-                    padding-top: 0px;
-
-                    @media only screen and (max-width: 767px) {
-                        padding: 14px;
-                        padding-top: 0;
-                    }
-                }
-            }
-        }
-    }
-}
-
-.site-footer {
-    position: relative;
-    padding: 64px 0 24px;
-    background-color: $dark;
-
-    @media only screen and (max-width: 767px) {
-        padding: 24px 0 24px;
-    }
-
-    &__logo {
-        display: block;
-        font-size: 0;
-        line-height: 0;
-        width: 100%;
-        max-width: 152px;
-        margin-left: auto;
-
-        @media only screen and (max-width: 767px) {
-            margin: 0 auto;
-        }
-
-        img,
-        svg {
-            width: 100%;
-            height: auto;
-        }
-    }
-
-    &__links {
-        ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-
-            li {
-                &:not(:last-child) {
-                    margin-bottom: 12px;
-                }
-
-                .btn {
-                    border-radius: 0;
-                    padding: 16px 45px;
-
-                    @media only screen and (max-width: 767px) {
-                        width: 100%;
-                        display: block;
-                        padding: 14px 32px;
-                    }
-                }
-            }
-        }
-    }
-
-    &__copyright {
-        color: $white;
-        text-align: center;
-        margin-top: 24px;
-
-        @media only screen and (max-width: 767px) {
-            margin-top: 32px;
-        }
-
-        p {
-            font-size: 14px;
         }
     }
 }

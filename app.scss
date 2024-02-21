@@ -116,6 +116,12 @@ ul {
         padding: 7px 20px;
     }
 
+    svg {
+        width: 20px;
+        height: auto;
+        margin-right: 5px;
+    }
+
     &-primary {
         border-color: $themeColor;
         background: $themeColor;
@@ -906,7 +912,7 @@ ul {
 
                 &:first-child {
                     a {
-                        padding: 8px;
+                        padding: 6px;
                         background: $themeColor;
                         color: $white;
                     }
@@ -1014,6 +1020,12 @@ ul {
         img {
             width: 100%;
             height: auto;
+        }
+    }
+
+    &.only-text {
+        .the-image-with-text__text-content {
+            margin: 0 auto;
         }
     }
 
@@ -1486,6 +1498,78 @@ ul {
             img {
                 width: 100%;
                 max-width: 20px;
+            }
+        }
+    }
+}
+
+.product-specs {
+    position: relative;
+    padding: 40px 0 48px;
+
+    h5 {
+        margin-bottom: 24px;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-top: 1px solid rgba($themeColor, 0.5);
+
+            &:last-child {
+                border-bottom: 1px solid rgba($themeColor, 0.5);
+            }
+        }
+    }
+}
+
+.categories-downloads {
+    position: relative;
+    padding: 0px 0 40px;
+
+    h2 {
+        color: $orange;
+        margin-bottom: 24px;
+    }
+
+    .download-files {
+        &__each {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            color: inherit;
+            text-decoration: none !important;
+        }
+    }
+
+    &__tags {
+        ul {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+                a {
+                    display: block;
+                    width: fit-content;
+                    font-size: 14px;
+                    padding: 8px 12px;
+                    border-radius: 4px;
+                    color: $themeColor;
+                    text-decoration: none;
+                    background: rgb(243, 244, 246);
+                }
             }
         }
     }

@@ -122,6 +122,11 @@ ul {
     padding: 7px 20px;
   }
 }
+.btn svg {
+  width: 20px;
+  height: auto;
+  margin-right: 5px;
+}
 .btn-primary {
   border-color: rgb(31, 41, 55);
   background: rgb(31, 41, 55);
@@ -805,7 +810,7 @@ ul {
   background: rgb(243, 244, 246);
 }
 .main-categories__tags ul li:first-child a {
-  padding: 8px;
+  padding: 6px;
   background: rgb(31, 41, 55);
   color: white;
 }
@@ -893,6 +898,9 @@ ul {
 .the-image-with-text__image img {
   width: 100%;
   height: auto;
+}
+.the-image-with-text.only-text .the-image-with-text__text-content {
+  margin: 0 auto;
 }
 .the-image-with-text__text-content {
   padding: 80px 0;
@@ -1277,4 +1285,63 @@ ul {
 .fixed-menu__inner a img {
   width: 100%;
   max-width: 20px;
+}
+
+.product-specs {
+  position: relative;
+  padding: 40px 0 48px;
+}
+.product-specs h5 {
+  margin-bottom: 24px;
+}
+.product-specs ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.product-specs ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-top: 1px solid rgba(31, 41, 55, 0.5);
+}
+.product-specs ul li:last-child {
+  border-bottom: 1px solid rgba(31, 41, 55, 0.5);
+}
+
+.categories-downloads {
+  position: relative;
+  padding: 0px 0 40px;
+}
+.categories-downloads h2 {
+  color: rgb(249, 115, 22);
+  margin-bottom: 24px;
+}
+.categories-downloads .download-files__each {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: inherit;
+  text-decoration: none !important;
+}
+.categories-downloads__tags ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.categories-downloads__tags ul li a {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  color: rgb(31, 41, 55);
+  text-decoration: none;
+  background: rgb(243, 244, 246);
 }/*# sourceMappingURL=app.css.map */

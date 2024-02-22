@@ -6,6 +6,8 @@
     <title>Sections</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="app.css" />
   </head>
   <body>
@@ -107,5 +109,77 @@
         </div>
       </div>
     </div>
+    <div class="the-videos">
+      <div class="container">
+        <div class="the-videos__swiper">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="image-wrapper">
+                  <div class="image-ratio image-ratio--16-9">
+                    <video controls loop playsinline mute>
+                      <source src="https://www.shutterstock.com/shutterstock/videos/1021478245/preview/stock-footage-close-up-woman-hand-touching-water-waves-splashing-tourist-enjoying-boat-ride.webm" type="video/mp4" />
+                    </video>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image-wrapper">
+                  <div class="image-ratio image-ratio--16-9">
+                    <video controls loop playsinline mute>
+                      <source src="https://www.shutterstock.com/shutterstock/videos/1021478245/preview/stock-footage-close-up-woman-hand-touching-water-waves-splashing-tourist-enjoying-boat-ride.webm" type="video/mp4" />
+                    </video>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image-wrapper">
+                  <div class="image-ratio image-ratio--16-9">
+                    <video controls loop playsinline mute>
+                      <source src="https://www.shutterstock.com/shutterstock/videos/1021478245/preview/stock-footage-close-up-woman-hand-touching-water-waves-splashing-tourist-enjoying-boat-ride.webm" type="video/mp4" />
+                    </video>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image-wrapper">
+                  <div class="image-ratio image-ratio--16-9">
+                    <video controls loop playsinline mute>
+                      <source src="https://www.shutterstock.com/shutterstock/videos/1021478245/preview/stock-footage-close-up-woman-hand-touching-water-waves-splashing-tourist-enjoying-boat-ride.webm" type="video/mp4" />
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var swiper = new Swiper(".the-videos__swiper .swiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          767: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          992: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          1200: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+        },
+      });
+    </script>
   </body>
 </html>

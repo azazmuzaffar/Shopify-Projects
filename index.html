@@ -15,6 +15,57 @@
     <link rel="stylesheet" href="app.css" />
   </head>
   <body>
+    <a href="#" class="announcement-bar">
+      <div class="container">
+        <h6>Click here to download the advertorial combo</h6>
+        <div class="announcement-bar__bg"></div>
+      </div>
+    </a>
+    <div class="site-header__logo">
+      <div class="container">
+        <a class="site-logo" href="#">
+          <img src="https://assets-global.website-files.com/64dcf2472ced385dfa68406f/64dcf2472ced385dfa6840d3_lpd-w.svg" alt="" />
+        </a>
+      </div>
+    </div>
+    <div class="site-header">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">
+          <a class="site-logo" href="#">
+            <img src="https://assets-global.website-files.com/64dcf2472ced385dfa68406f/64dcf2472ced385dfa6840d3_lpd-w.svg" alt="" />
+          </a>
+          <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="navbar-toggler__inner">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </button>
+          <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button> -->
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><span>PORTFOLIO</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><span>PRICING</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><span>SHOPIFY TASKS</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><span>3D/AR</span></a>
+              </li>
+            </ul>
+            <div class="navbar-button d-none d-lg-block">
+              <a href="#" class="btn btn-sm btn-has-arrow">Book A Call</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
     <div class="site-hero">
       <div class="container">
         <div class="site-hero__inner">
@@ -1113,6 +1164,24 @@
 
       var lightboxVideo = GLightbox({
         selector: ".play-button",
+      });
+
+      document.addEventListener("scroll", function () {
+        var scrollPosition = window.scrollY;
+        if (scrollPosition > 50) {
+          document.body.classList.add("scrolled");
+        } else {
+          document.body.classList.remove("scrolled");
+        }
+      });
+
+      document.addEventListener("load", function () {
+        var scrollPosition = window.scrollY;
+        if (scrollPosition > 50) {
+          document.body.classList.add("scrolled");
+        } else {
+          document.body.classList.remove("scrolled");
+        }
       });
     </script>
   </body>

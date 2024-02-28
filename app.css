@@ -22,6 +22,19 @@ body {
   }
 }
 
+body::-webkit-scrollbar {
+  width: 8px;
+  background-color: rgb(241, 241, 241);
+}
+
+body::-webkit-scrollbar-track {
+  background-color: rgb(241, 241, 241);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: black;
+}
+
 h1,
 .h1 {
   font-size: 34px;
@@ -227,6 +240,265 @@ h6 {
     height: 36px;
   }
 }
+.btn-has-arrow.btn-sm {
+  padding: 8px 46px 8px 12px;
+  font-size: 18px;
+}
+.btn-has-arrow.btn-sm::after {
+  width: 32px;
+  height: 32px;
+}
+
+.announcement-bar {
+  width: 100%;
+  color: black;
+  background-color: white;
+  text-align: center;
+  text-transform: capitalize;
+  border-bottom: 1px solid #000;
+  padding: 8px 0 7px;
+  transition: all 0.25s;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  z-index: 999;
+  min-height: 34px;
+  background-color: rgb(241, 241, 241);
+}
+@media only screen and (max-width: 991.98px) {
+  .announcement-bar {
+    min-height: 31px;
+  }
+}
+.announcement-bar h6 {
+  font-size: 17.5px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0;
+}
+@media only screen and (max-width: 991.98px) {
+  .announcement-bar h6 {
+    font-size: 14px;
+  }
+}
+.announcement-bar__bg {
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  transform-origin: 50% 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  transform: scale3d(1, 0, 1);
+}
+.announcement-bar:hover {
+  color: white;
+}
+.announcement-bar:hover .announcement-bar__bg {
+  transform: scale3d(1, 1, 1);
+}
+
+.site-header__logo {
+  position: fixed;
+  top: 34px;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  padding: 12px 0;
+  transition: 0.3s all ease;
+}
+@media only screen and (max-width: 991.98px) {
+  .site-header__logo {
+    top: 31px;
+    padding: 10px 0;
+  }
+}
+.scrolled .site-header__logo {
+  top: 0;
+}
+.site-header__logo .site-logo {
+  width: 100%;
+  max-width: 142px;
+  display: block;
+  pointer-events: all;
+}
+@media only screen and (max-width: 991.98px) {
+  .site-header__logo .site-logo {
+    max-width: 120px;
+  }
+}
+.site-header__logo .site-logo img,
+.site-header__logo .site-logo svg {
+  width: 100%;
+  height: auto;
+}
+
+.site-header {
+  position: fixed;
+  top: 34px;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  padding: 12px 0;
+  transition: 0.3s all ease;
+}
+@media only screen and (max-width: 991.98px) {
+  .site-header {
+    top: 31px;
+    padding: 10px 0;
+  }
+}
+.scrolled .site-header {
+  top: 0;
+}
+.site-header .site-logo {
+  width: 100%;
+  max-width: 142px;
+  display: block;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+}
+@media only screen and (max-width: 991.98px) {
+  .site-header .site-logo {
+    max-width: 120px;
+  }
+}
+.site-header .site-logo img,
+.site-header .site-logo svg {
+  width: 100%;
+  height: auto;
+}
+.site-header .navbar-toggler {
+  border: none;
+  outline: none;
+  padding: 0;
+  outline: none !important;
+  box-shadow: none !important;
+  position: relative;
+  z-index: 9;
+  background: transparent;
+  padding: 6px;
+  background-color: black;
+}
+.site-header .navbar-toggler__inner {
+  position: relative;
+  z-index: 2;
+  width: 30px;
+  height: 23px;
+  padding: 0;
+}
+.site-header .navbar-toggler span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: white;
+  transition: 0.3s all ease;
+}
+.site-header .navbar-toggler span:not(:first-child) {
+  margin-top: 7px;
+}
+.site-header .navbar-toggler[aria-expanded=true] .navbar-toggler__inner span:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 6px);
+}
+.site-header .navbar-toggler[aria-expanded=true] .navbar-toggler__inner span:nth-child(2) {
+  opacity: 0;
+}
+.site-header .navbar-toggler[aria-expanded=true] .navbar-toggler__inner span:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -7px);
+}
+.site-header .navbar {
+  padding: 0;
+}
+.site-header .navbar .navbar-nav {
+  padding: 10px 24px;
+  border-radius: 8px;
+  background-color: white;
+}
+@media only screen and (max-width: 991.98px) {
+  .site-header .navbar .navbar-nav li {
+    text-align: center;
+  }
+}
+.site-header .navbar .navbar-nav li:not(:last-child) {
+  margin-right: 40px;
+}
+@media only screen and (max-width: 1199.98px) {
+  .site-header .navbar .navbar-nav li:not(:last-child) {
+    margin-right: 24px;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .site-header .navbar .navbar-nav li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+}
+.site-header .navbar .navbar-nav li a {
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1;
+  color: black;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  padding: 6px 8px 5px;
+}
+@media only screen and (max-width: 991.98px) {
+  .site-header .navbar .navbar-nav li a {
+    font-size: 32px;
+  }
+}
+.site-header .navbar .navbar-nav li a span {
+  position: relative;
+  z-index: 2;
+  transition: 0.2s all ease;
+}
+.site-header .navbar .navbar-nav li a::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: black;
+  z-index: 1;
+  transition: 0.2s all ease;
+}
+.site-header .navbar .navbar-nav li a:hover span {
+  color: white;
+}
+.site-header .navbar .navbar-nav li a:hover::after {
+  width: 100%;
+}
+@media only screen and (max-width: 991.98px) {
+  .site-header .navbar .navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: 0.3s all ease;
+  }
+  .site-header .navbar .navbar-collapse.show {
+    transform: translateX(0);
+  }
+}
 
 .site-hero {
   position: relative;
@@ -238,11 +510,14 @@ h6 {
   border-radius: 24px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+  background-color: rgb(241, 241, 241);
 }
 @media only screen and (max-width: 767.98px) {
   .site-hero {
     padding: 115px 0 48px;
     border-radius: 16px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 }
 .site-hero .container {
